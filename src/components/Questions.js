@@ -1,7 +1,7 @@
 import React from 'react'
 
 
-// components
+
 import SingleQuestion from './SingleQuestion'
 import Data from './Data'
 
@@ -38,13 +38,7 @@ export default function Questions() {
                 .then((response) => response.json())
                 .then((data) => {
                     setQuestions(data.results);
-                    // each item in questionsAndAnswers will be an object of:
-                    /*
-                      -question
-                      -shuffled answers
-                      -correct answer
-                      -selected answer
-                    */
+                    
                     setQuestionsAndAnswers(
                         data.results.map((questionObject) => {
                             return {
